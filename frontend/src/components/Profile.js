@@ -15,7 +15,9 @@ function Profile() {
   const [readings, setReading] = useState([]);
   const [reading, updateRead] = useState({});
   const isProduction = process.env.NODE_ENV === "production";
-  const baseURL = isProduction ? "" : "http://localhost:3000";
+  const baseURL = isProduction
+    ? "https://fideliuss.herokuapp.com/"
+    : "http://localhost:3000";
 
   useEffect(() => {
     const authService = new AuthService();

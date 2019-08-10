@@ -10,7 +10,9 @@ function ThreeCards() {
   const [form, handleInputs] = useForm();
 
   const isProduction = process.env.NODE_ENV === "production";
-  const baseURL = isProduction ? "" : "http://localhost:3000";
+  const baseURL = isProduction
+    ? "https://fideliuss.herokuapp.com"
+    : "http://localhost:3000";
   useEffect(() => {
     axios
       .get(`${baseURL}/cards/random?n=3`)

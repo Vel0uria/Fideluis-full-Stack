@@ -1,6 +1,8 @@
 import axios from "axios";
 const isProduction = process.env.NODE_ENV === "production";
-const baseURL = isProduction ? "" : "http://localhost:3000";
+const baseURL = isProduction
+  ? "https://fideliuss.herokuapp.com"
+  : "http://localhost:3000";
 
 class AuthService {
   constructor() {
@@ -20,9 +22,6 @@ class AuthService {
   }
   profile() {
     return this.service.get("/auth/profile");
-  }
-  editProfile(data, id) {
-    return this.service.put(`/auth/profile/${id}, data`);
   }
 }
 
