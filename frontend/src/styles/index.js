@@ -17,7 +17,7 @@ export default createGlobalStyle`
 
 h1{
 
-  font-family:"Cinzel", serif
+  font-family:"Cinzel Decorative", cursive
 }
 
 h2{
@@ -138,4 +138,12 @@ export const Hover = styled.div`
       content: "";
     }
   }
+`;
+
+export const Detail = styled.div`
+  display: none;
+  border-radius: 2%;
+  text-align: center;
+  background-color: beige;
+  text-decoration: none;
 `;

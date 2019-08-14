@@ -17,5 +17,4 @@ router.get("/logout", logout);
 
 router.get("/profile", verifyToken, profile);
 
-router.put("/profile/:id", editProfile);
 module.exports = router;

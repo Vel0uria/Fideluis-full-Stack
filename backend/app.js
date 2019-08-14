@@ -33,8 +33,8 @@ app.use(
     credentials: true,
     origin: [
       "http://localhost:3001",
-      "https://fidelius.netlify.com/",
-      "http://fidelius.netlify.com/",
+      "https://fidelius-app.netlify.com",
+      "https://fidelius-app.netlify.com/",
       "https://fideliuss.herokuapp.com/"
     ]
   })

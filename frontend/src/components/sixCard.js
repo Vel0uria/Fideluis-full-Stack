@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import useForm from "../hooks/useForm";
-import { Button, Form, Card } from "../styles";
+import { Button, Form, Card, detail, Detail } from "../styles";
 import AuthService from "../services/auth";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const SixCards = () => {
 
   const isProduction = process.env.NODE_ENV === "production";
   const baseURL = isProduction
-    ? "https://fideliuss.herokuapp.com"
+    ? "https://fideliuss.herokuapp.com/"
     : "http://localhost:3000";
   useEffect(() => {
     axios
@@ -62,6 +62,9 @@ const SixCards = () => {
                 <img src={card.img} alt="card" />
                 <p>{card.meaning_up}</p>
                 <Button>See detail</Button>
+                <Detail>
+                  <p>{card.desc}</p>
+                </Detail>
               </div>
             )}
           </div>

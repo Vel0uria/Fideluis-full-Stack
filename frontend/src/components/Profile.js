@@ -8,7 +8,6 @@ import { MyContext } from "../services/Context";
 
 function Profile() {
   const { state } = useContext(MyContext);
-  console.log(state.user);
 
   const [form, handleInputs] = useForm();
 

@@ -10,7 +10,7 @@ function DBReading(props) {
 
   const isProduction = process.env.NODE_ENV === "production";
   const baseURL = isProduction
-    ? "https://fideliuss.herokuapp.com"
+    ? "https://fideliuss.herokuapp.com/"
     : "http://localhost:3000";
 
   useEffect(() => {
