@@ -22,7 +22,7 @@ h1{
 
 h2{
 
-  font-family:"Cinzel Decorative", cursive;
+  font-family:"Cinzel", serif;
 }
 
 img {

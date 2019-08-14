@@ -61,7 +61,7 @@ function DBReading(props) {
               <p>Loading</p>
             ) : (
               <div key={i}>
-                <p>{card.name}</p>
+                <h2>{card.name}</h2>
                 <img src={card.img} alt="card" />
                 <p>{card.meaning_up}</p>
                 <p>{card.desc}</p>
