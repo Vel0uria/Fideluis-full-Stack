@@ -55,20 +55,23 @@ function DBReading(props) {
   return (
     <div>
       {cards.map((card, i) => {
-        return (
-          <div key={i}>
-            {!card ? (
-              <p>Loading</p>
-            ) : (
-              <div key={i}>
-                <h2>{card.name}</h2>
-                <img src={card.img} alt="card" />
-                <p>{card.meaning_up}</p>
-                <p>{card.desc}</p>
-              </div>
-            )}
-          </div>
-        );
+        if (!cards) return <p>Loading...</p>;
+        else {
+          return (
+            <div key={i}>
+              {!card ? (
+                <p>Loading</p>
+              ) : (
+                <div key={i}>
+                  <h2>{card.name}</h2>
+                  <img src={card.img} alt="card" />
+                  <p>{card.meaning_up}</p>
+                  <p>{card.desc}</p>
+                </div>
+              )}
+            </div>
+          );
+        }
       })}
       <Link to="/profile">
         <Button onClick={deleteReading}>Delete</Button>

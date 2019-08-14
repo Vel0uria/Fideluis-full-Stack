@@ -50,20 +50,23 @@ function ThreeCards() {
       <h1>Your present, past and future</h1>
 
       {cards.map((card, i) => {
-        return (
-          <div key={i}>
-            {!card ? (
-              <p>Loading</p>
-            ) : (
-              <div key={i}>
-                <h2>{card.name}</h2>
-                <img src={card.img} alt="card" />
-                <p>{card.meaning_up}</p>
-                <Button>See detail</Button>
-              </div>
-            )}
-          </div>
-        );
+        if (!cards) return <p>Loading...</p>;
+        else {
+          return (
+            <div key={i}>
+              {!card ? (
+                <p>Loading</p>
+              ) : (
+                <div key={i}>
+                  <h2>{card.name}</h2>
+                  <img src={card.img} alt="card" />
+                  <p>{card.meaning_up}</p>
+                  <Button>See detail</Button>
+                </div>
+              )}
+            </div>
+          );
+        }
       })}
       <br />
       <Card>
